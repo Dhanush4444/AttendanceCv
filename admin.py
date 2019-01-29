@@ -8,8 +8,8 @@ def getJson():
     print(r.text)
 
 
-def deleteByName(Name):
-    r = req.delete(URL + 'api/' + 'delete/' + Name)
+def deleteByUSN(USN):
+    r = req.delete(URL + 'api/' + 'delete/' + USN)
     data = r.text
     print(data)
 
@@ -29,5 +29,5 @@ def UpdateStudent(Attendance, Cie, Name, Subject, USN):
 
 
 if __name__ == '__main__':
-    # UpdateStudent('90', '44', "Suhas", "Maths", "1SI15EC105")
-    deleteByName("Suhas")
+    # UpdateStudent('90', '44', "Rakesh", "Maths", "1SI15EC105")
+    deleteByUSN("Suhas")
