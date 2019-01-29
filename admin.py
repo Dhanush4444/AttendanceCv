@@ -8,6 +8,12 @@ def getJson():
     print(r.text)
 
 
+def deleteByName(Name):
+    r = req.delete(URL + 'api/' + 'delete/' + Name)
+    data = r.text
+    print(data)
+
+
 def UpdateStudent(Attendance, Cie, Name, Subject, USN):
     r = req.post(URL + 'api/' + 'update/' +
                  Attendance + '/' +
@@ -16,8 +22,12 @@ def UpdateStudent(Attendance, Cie, Name, Subject, USN):
                  Subject + '/' +
                  USN)
     data = r.text
-    print (data)
+    if data == 'Done':
+        print('Successfully updated Data')
+    else:
+        print('Error Uploading Data')
 
 
 if __name__ == '__main__':
-    UpdateStudent('80','44',"Suhas","Maths","1SI15EC105")
+    # UpdateStudent('90', '44', "Suhas", "Maths", "1SI15EC105")
+    deleteByName("Suhas")
