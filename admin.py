@@ -13,6 +13,10 @@ def deleteByUSN(USN):
     data = r.text
     print(data)
 
+def updateAttendanceByUSN(USN):
+    r = req.post(URL + 'api/' + 'update/' + 'attendance/' + USN)
+    data = r.text
+    print(data)
 
 def UpdateStudent(Attendance, Cie, Name, Subject, USN):
     r = req.post(URL + 'api/' + 'update/' +
@@ -30,4 +34,5 @@ def UpdateStudent(Attendance, Cie, Name, Subject, USN):
 
 if __name__ == '__main__':
     # UpdateStudent('90', '44', "Rakesh", "Maths", "1SI15EC105")
-    deleteByUSN("Suhas")
+    # deleteByUSN("Suhas")
+    updateAttendanceByUSN('1SI15EC105')
