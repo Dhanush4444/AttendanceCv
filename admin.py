@@ -1,6 +1,6 @@
 import requests as req
 
-URL = 'https://immense-springs-48842.herokuapp.com/'
+URL = 'https://attendancesit00.herokuapp.com/'
 
 
 def getJson():
@@ -33,6 +33,6 @@ def UpdateStudent(Attendance, Cie, Name, Subject, USN):
 
 
 if __name__ == '__main__':
-    # UpdateStudent('90', '44', "Rakesh", "Maths", "1SI15EC105")
-    # deleteByUSN("Suhas")
-    updateAttendanceByUSN('1SI15EC105')
+    UpdateStudent('90', '44', "Suhas", "Maths", "1SI15EC105")
+    # deleteByUSN("1SI15EC105")
+    # updateAttendanceByUSN('1SI15EC105')
