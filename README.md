@@ -1,7 +1,7 @@
 # Attendance CV
 
-## Install require pacakages
- `pip install requests`
+## Install required pacakages
+ `pip install -m require.txt`
  
 ## Clone Repository
    `git clone https://github.com/Dhanush4444/AttendanceCv.git`
