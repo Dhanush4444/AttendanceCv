@@ -40,4 +40,4 @@ def UpdateStudent(Attendance, Cie, Name, Subject, USN):
 if __name__ == '__main__':
     # UpdateStudent('90', '44', "Supreeth", "Maths", "1SI16EC099")
     # deleteByUSN("1SI15EC105")
-    updateAttendanceByUSN('1SI16EC099')
+    updateAttendanceByUSN('1SI15EC027')
