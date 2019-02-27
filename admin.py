@@ -45,4 +45,5 @@ def setAttendanceByUSN(usn,value):
 if __name__ == '__main__':
     # UpdateStudent('90', '44', "Supreeth", "Maths", "1SI16EC099")
     # deleteByUSN("1SI15EC105")
-    updateAttendanceByUSN('1SI15EC027')
+    # updateAttendanceByUSN('1SI15EC027')
+    print(setAttendanceByUSN('1SI15EC027','80'))
