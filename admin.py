@@ -23,7 +23,7 @@ def restAttendanceByUSN(USN):
     data = r.text
     print(data)
 
-def UpdateStudent(Attendance, Cie, Name, Subject, USN):
+def updateStudent(Attendance, Cie, Name, Subject, USN):
     r = req.post(URL + 'api/' + 'update/' +
                  Attendance + '/' +
                  Cie + '/'
@@ -35,6 +35,11 @@ def UpdateStudent(Attendance, Cie, Name, Subject, USN):
         print('Successfully updated Data')
     else:
         print('Error Uploading Data')
+
+def setAttendanceByUSN(usn,value):
+     r = req.post(URL + 'api/' + 'set/' + 'attendance/' + usn + '/' + value)
+     data = r.text
+     return data
 
 
 if __name__ == '__main__':
