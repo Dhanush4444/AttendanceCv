@@ -13,15 +13,18 @@ def deleteByUSN(USN):
     data = r.text
     print(data)
 
+
 def updateAttendanceByUSN(USN):
     r = req.post(URL + 'api/' + 'update/' + 'attendance/' + USN)
     data = r.text
     print(data)
 
+
 def restAttendanceByUSN(USN):
     r = req.post(URL + 'api/' + 'reset/' + 'attendance/' + USN)
     data = r.text
     print(data)
+
 
 def updateStudent(Attendance, Cie, Name, Subject, USN):
     r = req.post(URL + 'api/' + 'update/' +
@@ -36,18 +39,19 @@ def updateStudent(Attendance, Cie, Name, Subject, USN):
     else:
         print('Error Uploading Data')
 
-def setAttendanceByUSN(usn,value):
-     r = req.post(URL + 'api/' + 'set/' + 'attendance/' + usn + '/' + value)
-     data = r.text
-     return data
+
+def setAttendanceByUSN(usn, value):
+    r = req.post(URL + 'api/' + 'set/' + 'attendance/' + usn + '/' + value)
+    data = r.text
+    return data
 
 
 if __name__ == '__main__':
-    # UpdateStudent('90', '44', "Supreeth", "Maths", "1SI16EC099")
+    updateStudent('90', '44', "Kushal", "Maths", "1SI16EC083")
     # deleteByUSN("1SI15EC105")
     # updateAttendanceByUSN('1SI15EC027')
-    response = setAttendanceByUSN('1SI15EC027','80')
-    if response == 'SET':
-        print('Attendance set successfully')
-    else:
-        print('Error')
+    # response = setAttendanceByUSN('1SI15EC027','80')
+    # if response == 'SET':
+    #     print('Attendance set successfully')
+    # else:
+    #     print('Error')
